@@ -74,6 +74,7 @@
         var c = document.getElementById('myCanvas');
         var t= document.getElementById('test');
         var ctx = c.getContext('2d');
+        var i
         document.getElementById("myCanvas").width = 640;  
         document.getElementById("myCanvas").height = 640; 
         var cwidth = document.getElementById('myCanvas').offsetWidth;
@@ -87,7 +88,7 @@
         v.addEventListener("play", function() {
            var n=1
             document.getElementById("play").style.cssText = " display:none ";
-            var i = window.setInterval(function() {
+            i = setInterval(function() {
                 n++
                 t.innerHTML=n;
                 console.log(n)
@@ -98,7 +99,7 @@
         v.addEventListener("pause", function() {
             console.log('暂停')
             clearInterval(i)
-            window.clearInterval(i);  // 暂停绘画
+           clearInterval(i);  // 暂停绘画
         }, false);
 
         // 结束
