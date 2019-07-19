@@ -40,7 +40,7 @@
         #video{
             position:absolute;
             left:50%;
-            transform: translate3d(-50%,0,0);
+            /* transform: translate3d(-50%,0,0); */
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -62,10 +62,10 @@
 <body>
     <div class="content">
         <div id="play">播放</div>
-        <video id="video" x5-playsinline="true" playsinline="true" webkit-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true" src="movie.mp4" preload></video>
-        <canvas id="myCanvas">
+        <video id="video" x5-playsinline="true"  webkit-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true" src="movie.mp4" preload></video>
+        <!-- <canvas id="myCanvas">
             Your browser does not support the HTML5 canvas tag.
-        </canvas>
+        </canvas> -->
         <div id="test">这里是测试数据吗？</div>
     </div>
     <script type="text/javascript">
@@ -88,24 +88,24 @@
         v.addEventListener("play", function() {
            var n=1
             document.getElementById("play").style.cssText = " display:none ";
-            i = setInterval(function() {
-                n++
-                t.innerHTML=n;
-                console.log(n)
-                ctx.drawImage(v, 0, 0, cwidth, cheight);
-            }, 20);  // 每0.02秒画一张图片
+            // i = setInterval(function() {
+            //     n++
+            //     t.innerHTML=n;
+            //     console.log(n)
+            //     ctx.drawImage(v, 0, 0, cwidth, cheight);
+            // }, 20);  // 每0.02秒画一张图片
         }, false);
         // 暂停
         v.addEventListener("pause", function() {
             console.log('暂停')
-            clearInterval(i)
-           clearInterval(i);  // 暂停绘画
+            //clearInterval(i)
+           //clearInterval(i);  // 暂停绘画
         }, false);
 
         // 结束
         v.addEventListener("ended", function() {
             console.log('结束')
-            clearInterval(i);
+            //clearInterval(i);
         }, false);
     </script>
 </body>
