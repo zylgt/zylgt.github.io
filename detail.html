@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/detail.css" />
+  </head>
+  <body>
+    <!-- 头部 -->
+    <div class="header">
+      <a href="index.html">
+        <img src="img/logo.png" alt="" class="header-logo" />
+      </a>
+    </div>
+    <div
+      class="content"
+      style="background:url(img/detail.jpeg) no-repeat center;background-size:100%;background-attachment: fixed;"
+    >
+      <div class="mask">
+        <div class="logo">
+          <img src="img/info-logo.png" alt="" class="logo-img" />
+        </div>
+        <div class="middle">
+          <div class="title add">万有塔（他）引力门（们）</div>
+          <div class="intro add">
+            2014年北京国际设计周，汉符与德国艺术家吴勒及郑初阳跨界合作一起创作大型装置作品－“万有塔引力门”，以艺术的视角探讨跨文化和宗教艺术融合。以中西方之不同，以宗教法阐述世界观。
+            <br />
+            设计与艺术，东土与西方，是这个项目的人合。
+            <br />
+            几年的想法，在一个星期内迸发，完成。作者与作者的异同，矛盾与统一，展开了创作。
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 富文本内容 -->
+    <div class="info">
+      <div class="middle">
+        <img src="img/banner1.jpg" alt="" class="add" />
+        <p class="add">
+          为弘扬历史文献，发掘图书馆的潜在价值，便于SCI数据共享，百年清华大学图书馆在传统借阅空间中新近设立新媒体展示和互动空间，汉符设计®有幸与清华图书馆合作来实现数据可视化和学术资源再生的创新实验项目。
+        </p>
+        <img src="img/banner2.jpg" alt="" class="add" />
+      </div>
+    </div>
+  </body>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script>
+    $(function() {
+      var window_height = document.documentElement.clientHeight
+      window.οnresize = function() {
+        window_height = document.documentElement.clientHeight
+      }
+      var list = document.getElementsByClassName('add')
+
+      function ani() {
+        for (var i = 0; i < list.length; i++) {
+          if (
+            $(list[i]).offset().top - $(window).scrollTop() <=
+            window_height
+          ) {
+            $(list[i]).addClass('aniActive')
+          }
+        }
+        if ($(window).scrollTop() > 500) {
+          $('.header').addClass('headFix')
+        } else {
+          $('.header').removeClass('headFix')
+        }
+      }
+      ani()
+      $(window).scroll(function() {
+        ani()
+      })
+    })
+  </script>
+</html>
