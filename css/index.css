@@ -176,11 +176,15 @@ figcaption {
   width: 48%;
   margin-bottom: 30px;
 }
+.proImg-box {
+  max-height: 394px;
+}
 .pro-img {
   width: 100%;
   display: block;
   margin-bottom: 10px;
   border-radius: 6px;
+  max-height: 394px;
 }
 .pro-introBox {
   width: 100%;
@@ -445,8 +449,8 @@ input::-webkit-input-placeholder {
   opacity: 0;
 }
 .aniActive {
-  -webkit-animation: fadeInUp 1.2s linear both;
-  -moz-animation: fadeInUp 1.2s linear both;
+  -webkit-animation: fadeInUp 1s linear both;
+  -moz-animation: fadeInUp 1s linear both;
 }
 @-webkit-keyframes fadeInUp {
   0% {
@@ -504,3 +508,26 @@ input::-webkit-input-placeholder {
     top: 0;
   }
 } */
+.nav {
+  width: 60px;
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  z-index: 999;
+}
+.navList {
+  width: 30px;
+  height: 30px;
+  background: #000;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.navIcon {
+  display: block;
+  width: 16px;
+  height: 16px;
+}

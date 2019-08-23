@@ -156,3 +156,26 @@ body {
     transform: none;
   }
 }
+.nav {
+  width: 60px;
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  z-index: 999;
+}
+.navList {
+  width: 30px;
+  height: 30px;
+  background: #000;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.navIcon {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
