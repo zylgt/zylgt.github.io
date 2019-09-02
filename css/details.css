@@ -1,0 +1,216 @@
+body,
+div,
+span,
+header,
+footer,
+nav,
+section,
+aside,
+article,
+ul,
+dl,
+dt,
+dd,
+li,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+b,
+textarea,
+button,
+input,
+select,
+figure,
+figcaption {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+  text-decoration: none;
+  border: none;
+  font-weight: normal;
+  font-family: 'Microsoft YaHei';
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 100px;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 112.5px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 125px;
+  }
+}
+
+@media screen and (min-width: 440px) {
+  html {
+    font-size: 137.5px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 200px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 200px;
+  }
+}
+
+html {
+  font-size: 26.67vw;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+.header {
+  width: 100%;
+  height: 0.6rem;
+  background: #fff;
+  box-shadow: 0 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: -0.7rem;
+  transition: all 1s linear;
+}
+.header a {
+  width: 14%;
+  height: 100%;
+  display: block;
+}
+.header-logo {
+  width: 100%;
+  display: block;
+  margin-top: 0.17rem;
+}
+.headFix {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  /* animation: bo 1s linear forwards; */
+}
+.middle {
+  width: 90%;
+  margin: 0 auto;
+}
+.info {
+  width: 100%;
+  background: #14adcc;
+  padding: 0.5rem 0;
+  margin-bottom: 0.2rem;
+}
+.info-logo {
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+}
+.info-title {
+  font-size: 0.26rem;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 0.2rem;
+}
+.info-intro {
+  font-size: 0.17rem;
+  color: #fff;
+  text-align: center;
+}
+.infos img {
+  width: 100%;
+  margin-bottom: 0.1rem;
+}
+.infos p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 0.1rem;
+}
+.aniActive {
+  -webkit-animation: fadeInUp 1.2s linear both;
+  -moz-animation: fadeInUp 1.2s linear both;
+}
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.nav {
+  width: 0.3rem;
+  position: fixed;
+  right: 0.1rem;
+  bottom: 0.3rem;
+  z-index: 999;
+}
+.navList {
+  width: 0.3rem;
+  height: 0.3rem;
+  background: #000;
+  border-radius: 0.03rem;
+  margin-bottom: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.navIcon {
+  display: block;
+  width: 0.16rem;
+  height: 0.16rem;
+}

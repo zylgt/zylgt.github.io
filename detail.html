@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>非常创意</title>
+    <link rel="stylesheet" href="css/details.css" />
+  </head>
+  <body>
+    <!-- 头部 -->
+    <div class="header">
+      <a href="index.html">
+        <img src="img/logo.png" alt="" class="header-logo" />
+      </a>
+    </div>
+    <!-- 简介 -->
+    <div class="info anchor">
+      <img src="img/info-logo.png" alt="" class="info-logo add" />
+      <div class="middle">
+        <p class="info-title add">
+          宁夏国际会堂
+        </p>
+        <p class="info-intro add">
+          建筑融合中国传统建筑和阿拉伯建筑风格和文化精髓，采用正圆和正方为建筑主体形态，喻天圆地方、天地和谐之意
+        </p>
+      </div>
+    </div>
+    <!-- 富文本内容 -->
+    <div class="infos">
+      <div class="middle">
+        <img src="img/banner1.png" alt="" class="add" />
+        <p class="add">
+          为弘扬历史文献，发掘图书馆的潜在价值，便于SCI数据共享，百年清华大学图书馆在传统借阅空间中新近设立新媒体展示和互动空间，汉符设计®有幸与清华图书馆合作来实现数据可视化和学术资源再生的创新实验项目。
+        </p>
+        <img src="img/banner2.jpeg" alt="" class="add" />
+      </div>
+    </div>
+    <!-- 箭头导航 -->
+    <div class="nav">
+      <div class="navList" id="navUp">
+        <img src="img/up.png" alt="" class="navIcon" />
+      </div>
+    </div>
+  </body>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script>
+    $(function() {
+      var window_height = document.documentElement.clientHeight
+      window.οnresize = function() {
+        window_height = document.documentElement.clientHeight
+      }
+      var list = document.getElementsByClassName('add')
+
+      function ani() {
+        for (var i = 0; i < list.length; i++) {
+          if (
+            $(list[i]).offset().top - $(window).scrollTop() <=
+            window_height
+          ) {
+            $(list[i]).addClass('aniActive')
+          }
+        }
+        if ($(window).scrollTop() > 100) {
+          $('.header').addClass('headFix')
+        } else {
+          $('.header').removeClass('headFix')
+        }
+      }
+      ani()
+      $(window).scroll(function() {
+        ani()
+      })
+      $('#navUp').click(function() {
+        $('html , body').animate({ scrollTop: 0 }, 1000)
+      })
+    })
+  </script>
+</html>
